@@ -1,20 +1,22 @@
 package com.example.stevennl.tastysnake.controller.test;
 
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import com.example.stevennl.tastysnake.R;
+import com.example.stevennl.tastysnake.base.BaseActivity;
 import com.example.stevennl.tastysnake.util.sensor.SensorController;
 
-public class SensorTestActivity extends AppCompatActivity {
+public class SensorTestActivity extends BaseActivity {
+    private static final String TAG = "SensorTestActivity";
+
     private Handler sensorHandler;
     private Runnable sensorRunnable = new Runnable() {
         @Override
         public void run() {
-            xShow.setText("X: " + sController.getxAccVal() + "");
-            yShow.setText("Y: " + sController.getyAccVal() + "");
+            xShow.setText("X: " + sController.getXAccVal() + "");
+            yShow.setText("Y: " + sController.getYAccVal() + "");
             xAccShow.setText("X Acc: " + sController.getAccXAcc() + "");
             yAccShow.setText("Y Acc: " + sController.getAccYAcc() + "");
             sensorHandler.postDelayed(sensorRunnable, 80);

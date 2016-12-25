@@ -103,10 +103,10 @@ public class SensorController {
         return Direction.NONE;
     }
 
-    public float getxAccVal() {
+    public float getXAccVal() {
         return xAccVal;
     }
-    public float getyAccVal() {
+    public float getYAccVal() {
         return yAccVal;
     }
 
